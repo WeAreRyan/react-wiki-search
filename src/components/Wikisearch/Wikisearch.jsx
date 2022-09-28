@@ -10,7 +10,7 @@ export default function Wikisearch() {
     e.preventDefault();
     if (search === "") return;
 
-    const endpoint = `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json*origin=*&&srlimi=20&srsearch=${search}`;
+    const endpoint = `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimi=20&srsearch=${search}`;
     const response = await fetch(endpoint);
 
     if (!response.ok) {
